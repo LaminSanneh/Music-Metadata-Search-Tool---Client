@@ -1,0 +1,63 @@
+.main-content__searchbox-container{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.main-content__searchbox-container__search-options,
+.main-content__searchbox-container__searchbox{
+	width: 300px;
+	margin: 0 auto;
+}
+
+.main-content__searchbox-container__search-options__search-option-container{
+	width: 32%;
+	display: inline-block;
+}
+
+.main-content__searchbox-container__searchbox{
+	margin-top: $margin*0.5;
+	position: relative;
+
+	input{
+		width: 100%;
+		padding: $padding;
+	}
+}
+
+.sidebar-permanent{
+	.sidebar{
+		width: 25% !important;
+		position: relative;
+		@include transition(width 0.5s ease);	
+	}
+
+	.main-content{
+		width: 75%;
+	}
+}
+
+.main-content__searchbox-container__searchbox__dropdown{
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	width: 100%;
+	position: absolute;
+	top: 100%;
+
+	li{
+		background-color: white;
+		text-align: left;
+		padding: $padding*0.5;
+		width: 100%;
+
+		&:hover{
+			background-color:darken(white, 5%);
+			cursor: pointer;
+		}
+	}
+}
+
+.main-content__searchbox-container__searchbox__dropdown--invisible{
+	display: none;
+}

@@ -1,0 +1,23 @@
+<div {{bind-attr class="sidebarPermanent:sidebar-permanent"}}>
+	<header class="main-header">
+		{{#link-to "index"}}Home{{/link-to}}
+	</header>
+	<div {{bind-attr class=":sidebar sidebarOpen:sidebar--open"}}>
+		<nav class="menu">
+
+		</nav>
+		{{#if sidebarOpen}}
+			{{#unless sidebarPermanent}}
+				<button {{action "toggleSidebar"}} class="sidebar__sidebar-toggler">Close Menu</button>
+			{{/unless}}
+		{{else}}
+			<button {{action "toggleSidebar"}} class="sidebar__sidebar-toggler">Open Menu</button>
+		{{/if}}
+
+		<div class="main-content__menu-permanent-container">
+			<label>Make menu permanently Open</label>
+			{{input checked=sidebarPermanent type="checkbox"}}
+		</div>
+	</div>
+	{{outlet}}
+</div>

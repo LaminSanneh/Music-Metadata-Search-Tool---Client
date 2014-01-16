@@ -1,0 +1,42 @@
+<h2>{{resultHeader}} Results</h2>
+<div class="main-content__search-results">
+	{{#if isAlbum}}
+  		<div class="main-content__search-results__search-result">
+  			{{#each result in results}}
+		  		<p>{{#link-to "album" result}} {{result.name}} {{/link-to}}</p>
+  			{{/each}}
+			<div class="other-results">
+				<h3>Other Less relevant Results</h3>
+				{{#each item in otherResults}}
+					  <p>{{#link-to "album" item}} {{item.name}} {{/link-to}}</p>
+				{{/each}}	
+			</div>
+		</div>
+	{{else}}
+		{{#if isSong}}
+			<div class="main-content__search-results__search-result">
+				{{#each result in results}}
+			  		<p>{{#link-to "song" result}} {{result.name}} {{/link-to}}</p>
+	  			{{/each}}
+				<div class="other-results">
+					<h3>Other Less relevant Results</h3>
+					{{#each item in otherResults}}
+						  <p>{{#link-to "song" item}} {{item.name}} {{/link-to}}</p>
+					{{/each}}	
+				</div>
+			</div>
+		{{else}}
+			<div class="main-content__search-results__search-result">
+				{{#each result in results}}
+			  		<p>{{#link-to "artist" result}} {{result.name}} {{/link-to}}</p>
+	  			{{/each}}
+				<div class="other-results">
+					<h3>Other Less relevant Results</h3>
+					{{#each item in otherResults}}
+						  <p>{{#link-to "artist" item}} {{item.name}} {{/link-to}}</p>
+					{{/each}}	
+				</div>
+			</div>
+		{{/if}}
+	{{/if}}	
+</div>

@@ -1,0 +1,31 @@
+.sidebar{
+	position: absolute;
+	width: 0px;
+	display: inline-block;
+	background-color: pink;
+	float: left;
+	height: 500px;
+	@include transition(width 0.5s ease);
+
+	>*{
+		display: none;
+	}
+}
+
+.sidebar--open{
+	>*{
+		display: block;
+	}
+	width: 25%;
+	@include transition(width 0.5s ease);
+}
+
+.sidebar__sidebar-toggler{
+	@include rotate(-90deg);
+	display: inline-block;
+	position: absolute;
+	right: -72px;
+	top: 36px;
+	padding: $padding*0.5 $padding;
+	background-color: white;
+}

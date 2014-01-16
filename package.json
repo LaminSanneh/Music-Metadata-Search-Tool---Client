@@ -1,0 +1,13 @@
+{
+  "name": "Ember-Tutorial",
+  "description": "Write what u want",
+  "version": "0.0.1",
+  "private": true,
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-watch": "~0.4.4",
+    "grunt-ember-templates": "*",
+    "grunt-contrib-uglify": "~0.2.7",
+    "grunt-contrib-sass": "~0.6.0"
+  }
+}

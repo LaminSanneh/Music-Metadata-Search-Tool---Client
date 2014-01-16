@@ -1,0 +1,22 @@
+$padding: 16px;
+$margin: 16px;
+$border: 16px;
+
+@mixin breakpoint($point) {
+  @if $point == papa-bear {
+    @media (min-width: 1600px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (min-width: 1250px) { @content; }
+  }
+  @else if $point == youth-bear
+  {
+    @media (min-width: 1024px) { @content; }
+  }
+  @else if $point == child-bear {
+    @media (min-width: 769px)  { @content; }
+  }
+  @else if $point == baby-bear {
+    @media (min-width: 480px)  { @content; }
+  }
+}

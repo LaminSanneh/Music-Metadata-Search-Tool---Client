@@ -1,0 +1,24 @@
+<div class="main-content sidebarOpen::main-content--expanded">
+	<div class="main-content__searchbox-container">
+		<div class="main-content__searchbox-container__search-options">
+			{{#each searchType in searchTypes}}
+				<div class="main-content__searchbox-container__search-options__search-option-container">
+					<label class="main-content__searchbox-container__search-options__search-option-container__search-option-label">{{searchType.typeName}}</label>
+					<input type="radio" name="search-option" class="main-content__searchbox-container__search-options__search-option-container__search-option" {{bind-attr value=searchType.typeName}} {{bind-attr id=searchType.typeName}} {{action "changeSearchType" searchType bubbles=false on="click" }} />
+				</div>
+			{{/each}}
+		</div>
+
+		<div class="main-content__searchbox-container__searchbox">
+			{{view App.SearchboxView valueBinding="searchValue"}}
+			<ul {{bind-attr class=":main-content__searchbox-container__searchbox__dropdown searchBoxHasFocus::main-content__searchbox-container__searchbox__dropdown--invisible"}}>
+				{{#each item in controller.dropDownSearchItems}}
+					<li {{action "searchItemClicked" item on="click"}}>
+						{{item.name}}
+					</li>
+				{{/each}}
+			</ul>	
+		</div>
+		{{outlet}}
+	</div>
+</div>
