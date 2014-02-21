@@ -10,7 +10,7 @@
 		</div>
 
 		<div class="main-content__searchbox-container__searchbox">
-			{{view App.SearchboxView valueBinding="searchValue"}}
+			{{view App.SearchboxView value=searchValues}}
 			<ul {{bind-attr class=":main-content__searchbox-container__searchbox__dropdown searchBoxHasFocus::main-content__searchbox-container__searchbox__dropdown--invisible"}}>
 				{{#each item in controller.dropDownSearchItems}}
 					<li {{action "searchItemClicked" item on="click"}}>

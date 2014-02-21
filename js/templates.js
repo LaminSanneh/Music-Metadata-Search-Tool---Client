@@ -171,8 +171,8 @@ function program3(depth0,data) {
   if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
   data.buffer.push("\r\n		</div>\r\n\r\n		<div class=\"main-content__searchbox-container__searchbox\">\r\n			");
   data.buffer.push(escapeExpression(helpers.view.call(depth0, "App.SearchboxView", {hash:{
-    'valueBinding': ("searchValue")
-  },hashTypes:{'valueBinding': "STRING"},hashContexts:{'valueBinding': depth0},contexts:[depth0],types:["ID"],data:data})));
+    'value': ("searchValue")
+  },hashTypes:{'value': "ID"},hashContexts:{'value': depth0},contexts:[depth0],types:["ID"],data:data})));
   data.buffer.push("\r\n			<ul ");
   data.buffer.push(escapeExpression(helpers['bind-attr'].call(depth0, {hash:{
     'class': (":main-content__searchbox-container__searchbox__dropdown searchBoxHasFocus::main-content__searchbox-container__searchbox__dropdown--invisible")

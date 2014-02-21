@@ -3,9 +3,9 @@ App.SearchController = Ember.ObjectController.extend({
 		var searchValue = this.get('searchValue');
 		if(!searchValue) return;
 
-		var matchBotherUpperAndLower = new RegExp(searchValue, 'i');
+		var matchBothUpperAndLower = new RegExp(searchValue, 'i');
 		return this.get('searchResults').filter(function(value){
-			return value.get('name').match(matchBotherUpperAndLower);
+			return value.get('name').match(matchBothUpperAndLower);
 			// return true;
 		});
 		// return this.get('searchResults');
@@ -56,12 +56,10 @@ App.SearchController = Ember.ObjectController.extend({
 	},
 
 	makeQuery: function(searchValue, searchType){
-		// console.log(searchValue);
-		// console.log(searchType.get('typeName'));
 		var controller = this;
 		this.store.find(searchType.get('typeName'), {name: searchValue}).then(function(searchResults){
-			searchResults = searchResults.toArray();
-			// console.log("searchResults:");
+//			searchResults = searchResults.toArray();
+			console.log(searchResults.toArray());
 			// console.log(searchResults.get('length'));
 			// console.log(searchResults);
 			// console.log((searchResults[0]).get('name'));

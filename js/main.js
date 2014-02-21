@@ -26,5 +26,17 @@ DS.ArrayTransform = DS.Transform.extend({
 
 App.register("transform:array", DS.ArrayTransform);
 
+App.SongAdapter = DS.RESTAdapter.extend({});
+App.AlbumAdapter = DS.RESTAdapter.extend({});
+App.ArtistAdapter = DS.RESTAdapter.extend({});
+
+DS.RESTAdapter.reopen({
+   host: 'http://localhost:8000',
+    ajax: function(url, method, hash) {
+        hash.crossDomain = true;
+        return this._super(url, method, hash);
+    }
+});
+
 
 
