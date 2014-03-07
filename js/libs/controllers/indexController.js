@@ -1,15 +1,15 @@
 App.IndexController = Ember.ObjectController.extend({
-	dropDownSearchItems: function(){
-		var searchValue = this.get('searchValue');
-		if(!searchValue) return;
-
-		var matchBotherUpperAndLower = new RegExp(searchValue, 'i');
-		return this.get('searchResults').filter(function(value){
-			return value.get('name').match(matchBotherUpperAndLower);
-			return true;
-		});
-		// return this.get('searchResults');
-	}.property('searchResults','searchValue'),
+//	dropDownSearchItems: function(){
+//		var searchValue = this.get('searchValue');
+//		if(!searchValue) return;
+//
+//		var matchBotherUpperAndLower = new RegExp(searchValue, 'i');
+//		return this.get('searchResults').filter(function(value){
+//			return value.get('name').match(matchBotherUpperAndLower);
+//			return true;
+//		});
+//		// return this.get('searchResults');
+//	}.property('searchResults','searchValue'),
 
 	// currentSearch: null,
 

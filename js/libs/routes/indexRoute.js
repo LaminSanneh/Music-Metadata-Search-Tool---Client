@@ -4,9 +4,9 @@ App.IndexRoute = Ember.Route.extend({
 	// 		controller.searchType = searchType;
 	// 	});
 	// },
-	redirect: function(){
-		this.transitionTo('search');
-	},
+//	redirect: function(){
+//		this.transitionTo('search');
+//	},
 	// beforeModel: function() {
 	//     this.transitionTo('search');
 	// }

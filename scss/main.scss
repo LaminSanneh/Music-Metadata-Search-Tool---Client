@@ -4,19 +4,25 @@
 @import "index";
 @import "sidebar";
 @import "song";
+@import "search-overlay";
+@import "bootstrap.min";
 
-.ember-application > .ember-view{
+body {
+    padding-top: 50px;
+}
+
+.ember-application > .ember-view {
 
 }
 
-.main-content{
-	background-color: green;
-	height: 600px;
-	width: 100%;
-	display: table;
-	/*vertical-align: middle;*/
+.main-content {
+    background-color: green;
+    height: 600px;
+    width: 100%;
+    display: table;
+    /*vertical-align: middle;*/
 }
 
-.main-content--expanded{
-	width: 100%;
+.main-content--expanded {
+    width: 100%;
 }

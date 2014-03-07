@@ -17,6 +17,10 @@ App.Router.map(function(){
 		this.resource('album', {path: 'album/:album_id'});
 	});
 
+//    this.resource('videos', {path: 'videos'}, function(){
+//
+//    });
+
 	this.resource('users', function(){
 
 		this.resource('user', {path: '/:user_id'}, function(){

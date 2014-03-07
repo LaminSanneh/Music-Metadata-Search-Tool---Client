@@ -51,7 +51,7 @@ module.exports = function(grunt) {
         beautify: true
       },
       build: {
-        src: ['js/vendor/jquery-1.10.2.js', 'js/vendor/handlebars-runtime.js', 'js/vendor/ember-1.2.0.js', 
+        src: ['js/vendor/jquery-1.10.2.js','js/vendor/bootstrap.min.js', 'js/vendor/handlebars-runtime.js', 'js/vendor/ember-1.2.0.js',
               'js/vendor/moment.js','js/vendor/ember-data.js', 'js/main.js','js/libs/helpers/*.js', 'js/templates.js', 'js/libs/models/*.js', 
                'js/libs/controllers/*.js', 'js/libs/router.js','js/fixtures.js','js/libs/routes/*.js','js/libs/views/*.js'],
         dest: 'js/min/main.min.js'

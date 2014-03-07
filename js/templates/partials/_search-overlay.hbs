@@ -1,0 +1,331 @@
+<div {{bind-attr class=":search-overlay searchOverlayVisible:search-overlay-visible" }}>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+                <div class="search-overlay-content">
+                    <div {{action "closeSearchOverlay"}} class="close-search-overlay-sign">
+                        <span class="glyphicon glyphicon-remove"></span>
+                    </div>
+                    <div>
+                        {{input value=searchTerm class="search-overlay__searchbox" placeholder="Search for music and videos here"}}
+                    </div>
+
+                    <!--Song results-->
+                    <div class="results artist-results">
+                        <h4 class="results__header">Song Results</h4>
+                        <div class="results__result-items">
+                            {{#each song in songResults}}
+                                <a href="#" class="results__result-item">
+                                    <div class="results__result-item__container">
+                                        <img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>
+                                        <div class="results__result-item__meta">
+                                            <span>{{song.name}}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            {{/each}}
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/emis-killa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <!--/Song Results-->
+
+                    <!--Artist Results-->
+                    <div class="results artist-results">
+                        <h4 class="results__header">Artist Results</h4>
+                        <div class="results__result-items">
+                            {{#each artist in artistResults}}
+                                <a href="#" class="results__result-item">
+                                    <div class="results__result-item__container">
+                                        <img src="http://localhost:8000/{{unbound artist.picture}}" alt=""/>
+                                        <div class="results__result-item__meta">
+                                            <span>{{artist.name}}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            {{/each}}
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/eminem.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <!--/Artist Results-->
+
+                    <!--Album Results-->
+                    <div class="results artist-results">
+                        <h4 class="results__header">Album Results</h4>
+                        <div class="results__result-items">
+                            {{#each album in albumResults}}
+                                <a href="#" class="results__result-item">
+                                    <div class="results__result-item__container">
+                                        <img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>
+                                        <div class="results__result-item__meta">
+                                            <span>{{album.name}}</span>
+                                        </div>
+                                    </div>
+                                </a>
+                            {{/each}}
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                            <!--<a href="#" class="results__result-item">-->
+                                <!--<div class="results__result-item__container">-->
+                                    <!--<img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>-->
+                                    <!--<div class="results__result-item__meta">-->
+                                        <!--<span>name</span>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                            <!--</a>-->
+                        </div>
+                    </div>
+                    <!--/Album Results-->
+
+                    <!--Video results-->
+                    {{view App.SearchVideos}}
+                    <!--/Video Results-->
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem earum eligendi est facilis illo laudantium libero magnam, minima nam, necessitatibus non provident saepe unde ut vero voluptas! Dicta, neque?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
