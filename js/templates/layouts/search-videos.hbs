@@ -1,15 +1,15 @@
-<div class="results artist-results">
-    <h4 class="results__header">Video Results</h4>
-    <div class="results__result-items">
-        {{#each video in videoResults}}
-            <a href="{{unbound video.url}}" class="results__result-item">
-                <div class="results__result-item__container">
-                    <img src="{{unbound video.picture}}" alt=""/>
-                    <div class="results__result-item__meta">
-                        <span>{{video.name}}</span>
-                    </div>
+<div class="results__result-items">
+    {{#each video in controller.videoResults}}
+        <a href="{{unbound video.url}}" class="results__result-item">
+            <div class="results__result-item__container">
+                <div class="results__result-item__container__overlay">
+                    <span class="glyphicon glyphicon-play-circle"></span>
                 </div>
-            </a>
-        {{/each}}
-    </div>
+                <img src="{{unbound video.picture}}" alt=""/>
+                <div class="results__result-item__meta">
+                    <span>{{video.name}}</span>
+                </div>
+            </div>
+        </a>
+    {{/each}}
 </div>

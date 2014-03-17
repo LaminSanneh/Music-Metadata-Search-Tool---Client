@@ -1,0 +1,75 @@
+.main-content__banner {
+    text-align: center;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.main-content__banner__transparent-background{
+    background: url(../../images/shakira.jpg) no-repeat;
+    background-size: cover;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.main-content__banner__image-container{
+    position: relative;
+}
+
+.main-content__banner__image{
+    height: 200px;
+    z-index: 2;
+
+    @include breakpoint(child-bear){
+        height: 350px;
+    }
+}
+
+.main-content__banner__header {
+    height: 70px;
+    background-color: #ffffff;
+    text-align: left;
+
+    .name{
+        font-weight: bold;
+        color: #000000;
+        font-size: 2.2em;
+        line-height: 70px;
+
+        span{
+            font-weight: 100;
+            color: lignten(#000000, 10%);
+        }
+    }
+}
+
+.main-content__details-titles{
+    min-height: 70px;
+
+    .detail-title{
+        line-height: 70px;
+        display: block;
+        margin-right: $margin*2;
+        font-size: 1.6em;
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+
+        @include  breakpoint(child-bear){
+            display: inline-block;
+        }
+
+        @include  breakpoint(mama-bear){
+            font-size: 1.8em;
+        }
+
+        @include  breakpoint(papa-bear){
+            font-size: 2em;
+        }
+
+        &:hover{
+            color: $lightBlue;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+<div class="main-content__banner">
+    <div class="main-content__banner__header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
+                    <a class="name" href="">Album/<span>{{name}}</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content__banner__image-container">
+        <div class="main-content__banner__transparent-background"></div>
+        <img class="main-content__banner__image" {{bind-attr src=picture}} alt=""/>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
+            <div class="main-content__details-titles">
+                <a class="detail-title" href="">Tracks</a>
+                <a class="detail-title" href="">Description</a>
+            </div>
+            <div class="main-content__details">
+                <div class="main-content__detail main-content__details__tracks">
+                    <div class="results song-results">
+                        <div class="results__result-items">
+                            {{#each song in songs}}
+                                <div>
+                                    {{#link-to "song" song class="results__result-item"}}
+                                        <div class="results__result-item__container">
+                                            <div class="results__result-item__meta">
+                                                <span>{{song.name}}</span>
+                                            </div>
+                                        </div>
+                                    {{/link-to}}
+                                </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content__detail main-content__details__bio">
+                    <p>
+                        {{notes}}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

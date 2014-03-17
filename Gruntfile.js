@@ -16,7 +16,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options:{
-          style: 'compressed',
+          style: 'compact',
           compass: true
         },
         files:{
@@ -26,16 +26,16 @@ module.exports = function(grunt) {
     },
     
     watch: {
-      livereload: {
-        options: { livereload: true },
-        files: ['css/min/main.min.css','js/min/main.min.js'],
-      },
+//      livereload: {
+//        options: { livereload: true },
+//        files: ['css/min/main.min.css','js/min/main.min.js'],
+//      },
       emberTemplates: {
         files: 'js/templates/**/*.hbs',
-        tasks: ['emberTemplates','uglify']
+        tasks: ['emberTemplates']
       },
       js:{
-        files: ['js/libs/controllers/*.js','js/libs/routes/*.js','js/libs/models/*.js','js/fixtures.js','js/libs/views/*.js','js/libs/router.js'],
+        files: ['js/libs/controllers/*.js','js/libs/routes/*.js','js/libs/models/*.js','js/fixtures.js','js/libs/views/*.js','js/libs/router.js','js/templates.js','js/main.js'],
         tasks: ['uglify']
       },
       sassWatch: {

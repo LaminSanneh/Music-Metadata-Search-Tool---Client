@@ -3,6 +3,8 @@ App.Album = DS.Model.extend({
 	genre: DS.attr(),
 	notes: DS.attr(),
 	picture: DS.attr(),
+	artist: DS.belongsTo('artist'),
+	songs: DS.hasMany('song'),
 	releaseYear: DS.attr()
 });
 

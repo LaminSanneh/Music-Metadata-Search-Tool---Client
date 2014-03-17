@@ -6,27 +6,23 @@ App.Router.map(function(){
 	});
 
 	this.resource('songs', {path: 'songs'}, function(){
-		this.resource('song', {path: 'song/:song_id'});
 	});
+    this.resource('song', {path: 'songs/:song_id'});
 
 	this.resource('artists', {path: 'artists'}, function(){
-		this.resource('artist', {path: 'artist/:artist_id'});
+
 	});
+    this.resource('artist', {path: 'artists/:artist_id'});
 
 	this.resource('albums', {path: 'albums'}, function(){
-		this.resource('album', {path: 'album/:album_id'});
 	});
+    this.resource('album', {path: 'albums/:album_id'});
 
-//    this.resource('videos', {path: 'videos'}, function(){
-//
-//    });
+    this.resource('videos', {path: 'videos'}, function(){
 
-	this.resource('users', function(){
+    });
+    this.resource('videos', {path: 'videos/:video_id/:title'}, function(){
 
-		this.resource('user', {path: '/:user_id'}, function(){
-			this.route('edit');
-		});
+    });
 
-		this.route('create');
-	});
 });

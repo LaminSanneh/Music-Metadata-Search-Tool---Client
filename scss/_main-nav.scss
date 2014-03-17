@@ -1,0 +1,30 @@
+.main-nav{
+    height: 70px;
+    background-color: $red;
+    position: fixed;
+    top: 15px;
+    width: 100%;
+    z-index: 3;
+    @include box-shadow(rgba(0, 0, 0, 0.5) 0 1px 3px);
+    text-align: center;
+    color: #ffffff;
+}
+
+.main-nav__search-button{
+    //    @include linear-gradient(color-stops(#1771d9, #1359ab), top);
+    border: 1px solid #0f4585;
+    //    background-color: #1771d9;
+    @include background-image(linear-gradient(top, #1771d9, #1359ab));
+    display: inline-block;
+    padding: $padding $padding*2;
+    @include border-radius(4px);
+    font-size: 1.4em;
+    cursor: pointer;
+    margin-top: 4px;
+    font-weight: bold;
+    @include box-shadow(rgba(255, 255, 255, 0.5) 0 1px 3px inset);
+}
+
+.main-nav__search-button:active{
+    @include box-shadow(rgba(255, 255, 255, 0.3) 0 1px 0px inset);
+}

@@ -13,6 +13,10 @@
         @include breakpoint(youth-bear){
             margin-bottom: $margin*5;
         }
+
+        &.results--invisible{
+            display: none;
+        }
     }
 }
 
@@ -68,11 +72,19 @@
     width: 100%;
     position: relative;
     text-decoration: none;
+    min-height: 176px;
     color: #ffffff;
     margin-bottom: $margin;
 
     img{
         width: 100%;
+    }
+
+    @include breakpoint(baby-bear){
+        margin-bottom: 0;
+        width: (100%)/2;
+        padding: $padding*0.5;
+        float: left;
     }
 
     @include breakpoint(child-bear){
@@ -86,12 +98,8 @@
         width: (100%)/4;
     }
 
-    @include breakpoint(mama-bear){
-        width: (100%)/5;
-    }
-
     @include breakpoint(papa-bear){
-        width: (100%)/6;
+        width: (100%)/5;
     }
 }
 
@@ -100,10 +108,15 @@
     padding: $padding*0.5;
     padding-bottom: $padding;
     color: #000000;
-    position: absolute;
     bottom: 0;
     width: 100%;
-    font-size: 0.9em;
-    max-height: 30px;
+    font-size: 0.85em;
+    max-height: 40px;
     overflow-y: hidden;
+}
+
+.close-search-overlay-button{
+    &:hover, &:active{
+        color: $lightBlue;
+    }
 }

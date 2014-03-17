@@ -1,0 +1,68 @@
+<div class="main-content__banner">
+    <div class="main-content__banner__header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
+                    <a class="name" href="">Artists/<span>{{name}}</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-content__banner__image-container">
+        <div class="main-content__banner__transparent-background"></div>
+        <img class="main-content__banner__image" {{bind-attr src=picture}} alt=""/>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
+            <div class="main-content__details-titles">
+                <a class="detail-title" href="">Videos</a>
+                <!--<a class="detail-title" href="">Related Artists</a>-->
+                <a class="detail-title" href="">Albums</a>
+                <a class="detail-title" href="">Biography</a>
+                <!--<a class="detail-title" href="">Links</a>-->
+            </div>
+            <div class="main-content__details">
+                <div class="main-content__details__videos">
+                    <div class="results video-results">
+                        {{view App.SearchVideos2}}
+                    </div>
+                </div>
+
+                <div class="main-content__details__albums">
+                    <div class="results results">
+                        <div class="results__result-items">
+                            {{#each album in albums}}
+                                {{#link-to "album" album class="results__result-item"}}
+                                    <div class="results__result-item__container">
+                                        <img src="{{unbound outputPicture album.picture}}" alt=""/>
+                                        <div class="results__result-item__meta">
+                                            <span>{{album.name}}</span>
+                                        </div>
+                                    </div>
+                                {{/link-to}}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-content__details__related-artists">
+
+                </div>
+
+                <div class="main-content__details__bio">
+                    <p>
+                        {{profile}}
+                    </p>
+                </div>
+
+                <div class="main-content__details__links">
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+body {
+    padding-top: 85px;
+    background-color: #EEEEEE;
+}
+
+.ember-application > .ember-view {
+
+}
+
+.main-content {
+    height: 600px;
+    width: 100%;
+    display: table;
+}
+
+.main-content--expanded {
+    width: 100%;
+}
+
+.logo{
+    float: left;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.5em;
+    line-height: 70px;
+}

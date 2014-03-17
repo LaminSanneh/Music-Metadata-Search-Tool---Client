@@ -1,18 +1,26 @@
 <div {{bind-attr class=":search-overlay searchOverlayVisible:search-overlay-visible" }}>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
+            <div class="col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3 col-sm-10 col-sm-offset-1">
                 <div class="search-overlay-content">
                     <div {{action "closeSearchOverlay"}} class="close-search-overlay-sign">
-                        <span class="glyphicon glyphicon-remove"></span>
+                        <span class="glyphicon glyphicon-remove close-search-overlay-button"></span>
                     </div>
                     <div>
                         {{input value=searchTerm class="search-overlay__searchbox" placeholder="Search for music and videos here"}}
                     </div>
 
+                    <!--Video results-->
+
+                    <div {{bind-attr class=":results :video-results videoResultsInvisible:results--invisible"}}>
+                        <h4 class="results__header">VIDEO RESULTS</h4>
+                        {{view App.SearchVideos}}
+                    </div>
+                    <!--/Video Results-->
+
                     <!--Song results-->
-                    <div class="results artist-results">
-                        <h4 class="results__header">Song Results</h4>
+                    <div {{bind-attr class=":results :artist-results songResultsInvisible:results--invisible"}}>
+                        <h4 class="results__header">SONG RESULTS</h4>
                         <div class="results__result-items">
                             {{#each song in songResults}}
                                 <a href="#" class="results__result-item">
@@ -125,18 +133,18 @@
                     <!--/Song Results-->
 
                     <!--Artist Results-->
-                    <div class="results artist-results">
-                        <h4 class="results__header">Artist Results</h4>
+                    <div {{bind-attr class=":results :artist-results artistResultsInvisible:results--invisible"}}>
+                        <h4 class="results__header">ARTIST RESULTS</h4>
                         <div class="results__result-items">
                             {{#each artist in artistResults}}
-                                <a href="#" class="results__result-item">
+                                {{#link-to "artist" artist class="results__result-item"}}
                                     <div class="results__result-item__container">
-                                        <img src="http://localhost:8000/{{unbound artist.picture}}" alt=""/>
+                                        <img src="{{unbound outputPicture artist.picture}}" alt=""/>
                                         <div class="results__result-item__meta">
                                             <span>{{artist.name}}</span>
                                         </div>
                                     </div>
-                                </a>
+                                {{/link-to}}
                             {{/each}}
                             <!--<a href="#" class="results__result-item">-->
                                 <!--<div class="results__result-item__container">-->
@@ -207,18 +215,18 @@
                     <!--/Artist Results-->
 
                     <!--Album Results-->
-                    <div class="results artist-results">
-                        <h4 class="results__header">Album Results</h4>
+                    <div {{bind-attr class=":results :artist-results albumResultsInvisible:results--invisible"}}>
+                        <h4 class="results__header">ALBUM RESULTS</h4>
                         <div class="results__result-items">
                             {{#each album in albumResults}}
-                                <a href="#" class="results__result-item">
+                                {{#link-to "album" album class="results__result-item"}}
                                     <div class="results__result-item__container">
-                                        <img src="http://localhost:8000/images/artists/shareefa.jpg" alt=""/>
+                                        <img src="{{unbound outputPicture album.picture}}" alt=""/>
                                         <div class="results__result-item__meta">
                                             <span>{{album.name}}</span>
                                         </div>
                                     </div>
-                                </a>
+                                {{/link-to}}
                             {{/each}}
                             <!--<a href="#" class="results__result-item">-->
                                 <!--<div class="results__result-item__container">-->
@@ -319,11 +327,6 @@
                         </div>
                     </div>
                     <!--/Album Results-->
-
-                    <!--Video results-->
-                    {{view App.SearchVideos}}
-                    <!--/Video Results-->
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis dolorem earum eligendi est facilis illo laudantium libero magnam, minima nam, necessitatibus non provident saepe unde ut vero voluptas! Dicta, neque?</p>
                 </div>
             </div>
         </div>

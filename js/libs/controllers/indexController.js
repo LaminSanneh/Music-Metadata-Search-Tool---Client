@@ -1,4 +1,4 @@
-App.IndexController = Ember.ObjectController.extend({
+App.IndexController = Ember.ArrayController.extend({
 //	dropDownSearchItems: function(){
 //		var searchValue = this.get('searchValue');
 //		if(!searchValue) return;
@@ -12,7 +12,7 @@ App.IndexController = Ember.ObjectController.extend({
 //	}.property('searchResults','searchValue'),
 
 	// currentSearch: null,
-
+    videoResults: null,
 	currentSearch: function(){
 
 		return this.store.createRecord('search',{

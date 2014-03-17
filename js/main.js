@@ -1,6 +1,20 @@
-window.App = Ember.Application.create();
+window.App = Ember.Application.create({
+    ready: function(){
+        $(".main-content__details-titles .detail-title").on("click", function(e){
+            console.log("clicked");
+            e.preventDefault();
+            var $this = $(this),
+                index = $this.index(),
+                detailElememntIndex = $(".main-content__details .main-content__detail:eq("+index+")");
 
-App.ApplicationAdapter = DS.FixtureAdapter;
+            detailElememntIndex.fadeIn(300).siblings().fadeOut(250);
+
+
+        });
+    }
+});
+
+//App.ApplicationAdapter = DS.FixtureAdapter;
 // App.ApplicationAdapter = DS.LSAdapter;
 
 DS.ArrayTransform = DS.Transform.extend({
@@ -32,12 +46,17 @@ App.ArtistAdapter = DS.RESTAdapter.extend({});
 App.VideoAdapter = DS.RESTAdapter.extend({});
 
 DS.RESTAdapter.reopen({
-   host: 'http://localhost:8000/api/v1',
-    ajax: function(url, method, hash) {
-        hash.crossDomain = true;
-        return this._super(url, method, hash);
-    }
+//   host: 'http://localhost:8000/api/v1'
+   host: 'http://95.85.57.6/api/v1'
+//    ajax: function(url, method, hash) {
+//        hash.crossDomain = true;
+//        return this._super(url, method, hash);
+//    }
 });
+
+//$(function(){
+//
+//});
 
 
 
